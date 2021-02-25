@@ -3,7 +3,7 @@
  *  en un futuro aquí se utilizarán los modelos
  */
 //Importamos el modelo de usuarios
-const Usuario = require('./models/Usuario');
+const Usuario = require('../models/Usuario');
 
 function crearUsuario(req, res){
     //Instaciamos un nuevo usuario utilizando la clase usuario

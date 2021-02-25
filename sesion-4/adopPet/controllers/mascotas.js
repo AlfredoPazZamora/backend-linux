@@ -1,4 +1,4 @@
-let Mascota = require('./models/Mascota');
+let Mascota = require('../models/Mascota');
 
 function crearMascota(req, res){
     let mascota = new Mascota(req.body);

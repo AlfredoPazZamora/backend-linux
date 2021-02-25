@@ -11,6 +11,9 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Agregamos el código de nuestro router (routes/index.js)*/
+app.use('/v1', require('./routes'));
+
 //Manejamos los errores 404
 //next (siguiente middelware), 
 //req - res (solicitud - respuesta)
@@ -21,7 +24,7 @@ app.use((req,res,next)=> {
 });
 
 //Iniciando el servidor
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 3001;
 
 let server = app.listen(port, ()=>{
     console.log('Escuchando desde el puerto ' + server.address().port);
