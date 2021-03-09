@@ -1,7 +1,8 @@
 // Importamos las bibliotecas necesarias
 let express = require('express'),
     bodyParser = require('body-parser'),
-    cors = require('cors');
+    cors = require('cors'),
+    passport = require('./config/passport');
 
 // Objeto global de la app
 let app = express();
