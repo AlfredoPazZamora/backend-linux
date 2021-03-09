@@ -1,8 +1,7 @@
 // Importamos las bibliotecas necesarias
 let express = require('express'),
     bodyParser = require('body-parser'),
-    cors = require('cors'),
-    passport = require('./config/passport');
+    cors = require('cors');
 
 // Objeto global de la app
 let app = express();
@@ -22,6 +21,9 @@ mongoose.connect(
 mongoose.set("debug", true);
 
 require("./models/Usuario");
+require('./config/passport');
+require("./models/Mascota");
+require("./models/Solicitud");
 // Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
 
 /*********************** Mongoose Configuration *******************************/
