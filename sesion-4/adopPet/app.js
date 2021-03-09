@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 const mongoose = require("mongoose");
 
 mongoose.connect(
-    "mongodb+srv://alfredoBedu:paz123@cluster0.nufya.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    "mongodb+srv://alfredoBedu:paz123@cluster0.nufya.mongodb.net/adoppet?retryWrites=true&w=majority"
 );
 
 mongoose.set("debug", true);

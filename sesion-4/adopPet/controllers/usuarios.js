@@ -60,7 +60,7 @@ function crearUsuario(req, res, next) {
 
 function obtenerUsuarios(req, res, next) {                              //Obteniendo usuario desde MongoDB.
     Usuario.findById(req.usuario.id, (err, user) => {
-        if (!user || err) {
+        if (!user || err) { 
         return res.sendStatus(401)
         }
         return res.json(user.publicData());
