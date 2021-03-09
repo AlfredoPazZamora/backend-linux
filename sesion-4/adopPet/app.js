@@ -11,6 +11,20 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+/*********************** Mongoose Configuration *******************************/
+const mongoose = require("mongoose");
+
+mongoose.connect(
+    "mongodb+srv://alfredoBedu:paz123@cluster0.nufya.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+);
+
+mongoose.set("debug", true);
+
+require("./models/Usuario");
+// Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
+
+/*********************** Mongoose Configuration *******************************/
+
 // Agregamos el código de nuestro router (routes/index.js)*/
 app.use('/v1', require('./routes'));
 
